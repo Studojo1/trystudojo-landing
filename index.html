@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studojo | Stu, your career agent</title>
+<meta name="description" content="Stu is your career agent at Studojo. A short call with Stu, then jobs that fit you, every day.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://studojo.com/">
+<meta property="og:title" content="Studojo | Stu, your career agent">
+<meta property="og:description" content="Stu is your career agent at Studojo. A short call with Stu, then jobs that fit you, every day.">
+<meta property="og:image" content="https://studojo.com/og-default.png">
+<meta name="theme-color" content="#8b5cf6">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap">
+<style>
+  :root {
+    --ink: #191a23;
+    --text: #171717;
+    --muted: #525252;
+    --faint: #8a8494;
+    --purple: #8b5cf6;
+    --purple-strong: #6d28d9;
+    --lilac: #f3eefc;
+    --bg: #f7f6fa;
+    --dot: #d9d5e2;
+    --card: #fff;
+    --bw: 1.5px;
+    --hard: 3px 3px 0 var(--ink);
+    --hard-up: 4px 4px 0 var(--ink);
+    --hard-down: 1px 1px 0 var(--ink);
+    --cta-bg: linear-gradient(180deg, #a78bfa 0%, #8b5cf6 58%, #7f4ff2 100%);
+    --cta-bg-hover: linear-gradient(180deg, #9a7cf7 0%, #7c4ef0 58%, #6f40e6 100%);
+    --cta-in: inset 0 1px 0 rgba(255, 255, 255, .38), inset 0 -1px 0 rgba(0, 0, 0, .12);
+    --ease: .14s ease;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--text);
+    font-family: Satoshi, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+
+  header {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand img { width: 36px; height: 36px; border-radius: 10px; border: var(--bw) solid var(--ink); box-shadow: var(--hard-down); }
+  .wordmark { font-family: "Clash Display", Satoshi, sans-serif; font-weight: 600; font-size: 24px; color: var(--purple); letter-spacing: -.01em; }
+  .part-of { font-size: 14px; color: var(--muted); }
+  .part-of a { font-weight: 700; color: var(--text); text-decoration: none; border-bottom: var(--bw) solid var(--purple); }
+
+  main { flex: 1; display: grid; place-items: center; padding: 12px 20px 40px; }
+  .card {
+    width: 100%;
+    max-width: 760px;
+    background: var(--card);
+    border: var(--bw) solid var(--ink);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0 var(--ink);
+    padding: 44px 44px 36px;
+    text-align: center;
+  }
+  .stu {
+    width: 96px; height: 96px;
+    border-radius: 24px;
+    border: var(--bw) solid var(--ink);
+    box-shadow: var(--hard);
+    transform: rotate(-4deg);
+    margin: 0 auto 22px;
+    display: block;
+  }
+  .pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: var(--bw) solid var(--ink);
+    background: var(--lilac);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Clash Display", Satoshi, sans-serif;
+    font-weight: 600;
+    font-size: clamp(32px, 5.4vw, 52px);
+    line-height: 1.06;
+    letter-spacing: -.02em;
+    margin: 0 0 16px;
+  }
+  h1 span { color: var(--purple); }
+  .sub { font-size: 18px; line-height: 1.55; color: var(--muted); max-width: 540px; margin: 0 auto 30px; }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    border-radius: 14px;
+    border: var(--bw) solid var(--ink);
+    background: var(--cta-bg);
+    box-shadow: var(--cta-in), var(--hard);
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+  }
+  .cta:hover { background: var(--cta-bg-hover); transform: translate(-1px, -1px); box-shadow: var(--cta-in), var(--hard-up); }
+  .cta:active { transform: translate(2px, 2px); box-shadow: var(--cta-in), var(--hard-down); }
+  .cta:focus-visible { outline: 3px solid var(--purple-strong); outline-offset: 4px; }
+  .cta .arrow { transition: transform var(--ease); }
+  .cta:hover .arrow { transform: translateX(3px); }
+  .note { font-size: 14px; color: var(--faint); margin: 14px 0 0; }
+
+  .steps { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: left; }
+  .steps li { border: var(--bw) solid var(--ink); border-radius: 14px; box-shadow: var(--hard); padding: 16px; background: var(--card); }
+  .steps .n { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 13px; font-weight: 700; color: var(--purple-strong); }
+  .steps b { display: block; font-size: 16px; margin: 6px 0 4px; }
+  .steps p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--muted); }
+
+  footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20px 28px; }
+  footer a { font-weight: 700; color: var(--text); }
+
+  @media (max-width: 640px) {
+    .part-of { display: none; }
+    .card { padding: 32px 20px 24px; border-radius: 18px; }
+    .stu { width: 80px; height: 80px; border-radius: 20px; }
+    .sub { font-size: 16px; }
+    .cta { width: 100%; justify-content: center; }
+    .steps { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cta, .cta .arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://studojo.com/" data-track>
+      <img src="favicon.png" alt="">
+      <span class="wordmark">studojo</span>
+    </a>
+    <span class="part-of">Part of <a href="https://studojo.com/" data-track>studojo.com</a></span>
+  </header>
+
+  <main>
+    <section class="card">
+      <img class="stu" src="favicon.png" alt="Stu, the Studojo career agent">
+      <div class="pill">Stu, your career agent</div>
+      <h1>Find jobs that fit you. <span>Reach the person who's hiring.</span></h1>
+      <p class="sub">Tell Stu what jobs you're looking for. Stu finds the ones that fit you best, finds out who's hiring, and reaches out to them for you.</p>
+      <a class="cta" href="https://studojo.com/" data-track>Continue to Studojo <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="note">Free to try. Opens studojo.com.</p>
+
+      <ol class="steps">
+        <li><span class="n">01</span><b>Talk to Stu</b><p>A short call about the jobs you want.</p></li>
+        <li><span class="n">02</span><b>Get jobs that fit</b><p>Matches picked for you, every day.</p></li>
+        <li><span class="n">03</span><b>Reach a person</b><p>Stu finds who's hiring and reaches out for you.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    This site is run by Studojo, the team behind <a href="https://studojo.com/" data-track>studojo.com</a>. Questions? <a href="mailto:admin@studojo.com">admin@studojo.com</a>
+  </footer>
+
+  <script>
+    // Tag every studojo.com link with the domain the visitor came in on.
+    var source = location.hostname.replace(/^www\./, "").replace(/\./g, "_") || "trystudojo";
+    document.querySelectorAll("a[data-track]").forEach(function (a) {
+      var url = new URL(a.href);
+      url.searchParams.set("utm_source", source);
+      url.searchParams.set("utm_medium", "landing");
+      a.href = url.toString();
+    });
+  </script>
+</body>
+</html>
